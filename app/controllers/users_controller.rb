@@ -1,6 +1,23 @@
 class UsersController < ApplicationController
-    #Create
-    #Read
-    #Update
-    #Delete
+    get "/users" do
+        users = User.all
+        users.to_json
+    end
+
+    get "users/:id" do
+        user = User.find(params[:id])
+        user.to_json
+    end
+
+    post "/users" do
+       user = User.create(name:params[:name])
+       status 201   #201 = created
+       user.to_json
+    end
+
+    delete "/users/:id" do
+        user = User.find(params[:id])
+        User.destroy
+        status 204  #204 = no content
+    end
 end
