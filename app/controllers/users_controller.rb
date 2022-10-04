@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
     get "/users" do
-        users = User.all
-        users.to_json
+        user = User.all
+        user.to_json
     end
 
     get "users/:id" do
