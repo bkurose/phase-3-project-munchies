@@ -9,4 +9,8 @@ class Restaurant < ActiveRecord::Base
     def all_reviews
         self.reviews.all
     end
+
+    def something
+
+    end
 end
