@@ -20,6 +20,12 @@ class RestaurantsController < ApplicationController
         allReviews = restaurant.all_reviews
         allReviews.to_json
     end
+    
+    get "/restaurants/:id/averagerating" do
+        restaurant = Restaurant.find(params[:id])
+        averageRating = restaurant.average_rating
+        averageRating.to_json
+    end
 
 
     post "/restaurants" do
