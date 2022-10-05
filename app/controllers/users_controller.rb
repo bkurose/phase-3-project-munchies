@@ -10,7 +10,7 @@ class UsersController < ApplicationController
     end
 
     post "/users" do
-       user = User.create(name:params[:name])
+       user = User.create(first_name:params[:first_name], last_name:params[:last_name])
        status 201   #201 = created
        user.to_json
     end

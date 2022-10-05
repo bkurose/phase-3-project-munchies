@@ -4,13 +4,13 @@ class RestaurantsController < ApplicationController
         restaurant.to_json
     end
 
-    get "restaurants/:id" do
+    get "/restaurants/:id" do
         restaurant = Restaurant.find(params[:id])
         restaurant.to_json
     end
 
     post "/restaurants" do
-       restaurant = Restaurant.create(name:params[:name])
+       restaurant = Restaurant.create(name:params[:name], description:params[:description], image_url:params[:image_url])
        status 201   #201 = created
        restaurant.to_json
     end
