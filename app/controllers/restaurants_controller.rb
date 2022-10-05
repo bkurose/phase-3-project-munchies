@@ -10,13 +10,15 @@ class RestaurantsController < ApplicationController
     end
 
     get "/restaurants/:id/topreview" do
-        restaurant = Restaurant.top_review
-        restaurant.to_json
+        restaurant = Restaurant.find(params[:id])
+        topReview = restaurant.top_review
+        topReview.to_json
     end
 
     get "/restaurants/:id/allreviews" do
-        restaurant = Restaurant.all_reviews
-        restaurant.to_json
+        restaurant = Restaurant.find(params[:id])
+        allReviews = restaurant.all_reviews
+        allReviews.to_json
     end
 
 
