@@ -9,6 +9,17 @@ class RestaurantsController < ApplicationController
         restaurant.to_json
     end
 
+    get "/restaurants/:id/top_review" do
+        restaurant = Restaurant.top_review
+        restaurant.to_json
+    end
+
+    get "/restaurants/:id/all_reviews" do
+        restaurant = Restaurant.all_reviews
+        restaurant.to_json
+    end
+
+
     post "/restaurants" do
        restaurant = Restaurant.create(name:params[:name], description:params[:description], image_url:params[:image_url])
        status 201   #201 = created

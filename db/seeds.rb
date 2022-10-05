@@ -23,5 +23,8 @@ Review.create(munchie_rating: 5, review_text: "Best pizza on planet Earth!", res
 Review.create(munchie_rating: 1, review_text: "Ordered pepperoni, got roaches instead.", restaurant_id: shack.id, user_id: baby_spice.id)
 Review.create(munchie_rating: 3, review_text: "Food was great; staff was rude", restaurant_id: emporium.id, user_id: scary_spice.id)
 Review.create(munchie_rating: 4, review_text: "Definitely in my top 5 pizza places!", restaurant_id: bistro.id, user_id: ginger_spice.id)
+Review.create(munchie_rating: 4, review_text: "Pretty amazing pizza!", restaurant_id: shack.id, user_id: posh_spice.id)
+Review.create(munchie_rating: 3, review_text: "Solid pizza, crust was kind of hard.", restaurant_id: palace.id, user_id: scary_spice.id)
+Review.create(munchie_rating: 5, review_text: "Food was pizza-tastic! Staff was amazing as well!", restaurant_id: emporium.id, user_id: sporty_spice.id)
 
 puts "✅ Done seeding!"
