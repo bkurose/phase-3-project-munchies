@@ -12,7 +12,7 @@ class Restaurant < ActiveRecord::Base
     end
 
     def average_rating
-        "#{self.reviews.all.average(:munchie_rating).to_i} Munchies!"
+        "#{self.reviews.all.average(:munchie_rating).to_i} 🍴"
     end
 
     def top_review
