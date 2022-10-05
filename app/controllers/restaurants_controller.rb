@@ -9,12 +9,12 @@ class RestaurantsController < ApplicationController
         restaurant.to_json
     end
 
-    get "/restaurants/:id/top_review" do
+    get "/restaurants/:id/topreview" do
         restaurant = Restaurant.top_review
         restaurant.to_json
     end
 
-    get "/restaurants/:id/all_reviews" do
+    get "/restaurants/:id/allreviews" do
         restaurant = Restaurant.all_reviews
         restaurant.to_json
     end
