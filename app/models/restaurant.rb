@@ -6,7 +6,7 @@ class Restaurant < ActiveRecord::Base
         self.restaurant.reviews
     end
 
-    def something
-
+    def self.average_rating
+        self.reviews.all.average(:munchie_rating).to_i
     end
 end
