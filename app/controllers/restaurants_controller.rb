@@ -30,7 +30,7 @@ class RestaurantsController < ApplicationController
 
     delete "/restaurants/:id" do
         restaurant = Restaurant.find(params[:id])
-        Restaurant.destroy
+        restaurant.destroy
         status 204  #204 = no content
     end 
 end

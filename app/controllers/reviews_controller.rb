@@ -15,7 +15,7 @@ class ReviewsController < ApplicationController
        review.to_json
     end
 
-    patch "reviews/:id" do
+    patch "/reviews/:id" do
         review = Review.find(params[:id])
         review.update(munchie_rating:params[:munchie_rating], review_text:params[:review_text])
         status 202  #202 = accepted
@@ -23,7 +23,7 @@ class ReviewsController < ApplicationController
 
     delete "/reviews/:id" do
         review = Review.find(params[:id])
-        Review.destroy
+        review.destroy
         status 204  #204 = no content
     end
 end
