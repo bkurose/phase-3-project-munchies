@@ -5,4 +5,8 @@ class Restaurant < ActiveRecord::Base
     def get_reviews
         self.restaurant.reviews
     end
+
+    def something
+
+    end
 end
