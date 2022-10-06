@@ -27,6 +27,11 @@ class RestaurantsController < ApplicationController
         averageRating.to_json
     end
 
+    get "/toprestaurants" do
+        restaurant = Restaurant.top_restaurant
+        restaurant.to_json
+    end
+
 
     post "/restaurants" do
        restaurant = Restaurant.create(name:params[:name], description:params[:description], image_url:params[:image_url])
